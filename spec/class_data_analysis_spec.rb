@@ -1,7 +1,10 @@
 require 'spec_helper'
 
-describe ArrayDataAnalysis do
-  let(:analyzer) { ArrayDataAnalysis.new(TEMPERATURE_DATA) }
+describe ClassDataAnalysis do
+  let(:data) {
+    TEMPERATURE_DATA.map {|arr| TemperatureData.new(arr[0], arr[1], arr[2]) }
+  }
+  let(:analyzer) { ClassDataAnalysis.new(data) }
 
   describe '#lowest_temperature' do
     it "returns the lowest number of all the nested arrays at the last index" do
