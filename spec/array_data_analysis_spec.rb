@@ -30,8 +30,8 @@ describe ArrayDataAnalysis do
   describe '#average_temperatures' do
     it "returns a array of average temperatures, on for each day" do
       expect(analyzer.average_temperatures.length).to be == 30
-      expect(analyzer.average_temperatures[0]).to == 73.5
-      expect(analyzer.average_temperatures[29]).to == 67.5
+      expect(analyzer.average_temperatures[0]).to be == 73.5
+      expect(analyzer.average_temperatures[29]).to be == 67.5
     end
   end
 end
